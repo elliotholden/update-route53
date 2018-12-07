@@ -8,7 +8,7 @@
 				"Type": "A",
 				"TTL": 300, 
 				"ResourceRecords": [
-					{ "Value": "18.233.156.8" }
+					{ "Value": "54.86.73.219" }
 				]
 			}
 		}

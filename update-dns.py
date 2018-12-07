@@ -6,7 +6,7 @@ import os
 import re
 
 # Pull down the current Route53 'A' record for lfcs.scriptbabies.com
-os.system('aws route53 list-resource-record-sets --hosted-zone-id Z2L2TMCJU3N9X3 --query "ResourceRecordSets[?Type == \'A\']" >./get-previous-record-set-output.txt 2>./get-previous-record-set-errors.txt')
+os.system('aws route53 list-resource-record-sets --hosted-zone-id Z2L2TMCJU3N9X3 --query "ResourceRecordSets[?Type == \'A\']" >>./output.txt 2>./errors.txt')
 
 
 # Get the current Public IPV4 address assigned to this instance
@@ -17,7 +17,7 @@ current_ip_address = os.popen('curl http://169.254.169.254/latest/meta-data/publ
 with open('record-set-template.json') as myfile:
 	my_json = re.sub('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', current_ip_address, myfile.read())
 
-f = open('changed-record-set.json', 'w')
+f = open('new-record-set.json', 'w')
 f.write(my_json)
 f.close()
 
