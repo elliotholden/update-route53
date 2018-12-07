@@ -6,7 +6,7 @@ import os
 import re
 
 # Pull down the current Route53 'A' record for lfcs.scriptbabies.com
-os.system('aws route53 list-resource-record-sets --hosted-zone-id Z2L2TMCJU3N9X3 --query "ResourceRecordSets[?Type == \'A\']" >>./output.txt 2>./errors.txt')
+os.system('aws route53 list-resource-record-sets --hosted-zone-id Z2L2TMCJU3N9X3 --query "ResourceRecordSets[?Type == \'A\']" >./output.txt 2>./errors.txt')
 
 
 # Get the current Public IPV4 address assigned to this instance
@@ -22,4 +22,3 @@ f.write(my_json)
 f.close()
 
 os.system('aws route53 change-resource-record-sets --hosted-zone-id Z2L2TMCJU3N9X3 --change-batch file://new-record-set.json &>dns-record-change.output')
-
