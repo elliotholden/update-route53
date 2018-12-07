@@ -17,7 +17,7 @@ current_ip_address = os.popen('curl http://169.254.169.254/latest/meta-data/publ
 with open('record-set-template.json') as myfile:
 	my_json = re.sub('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', current_ip_address, myfile.read())
 
-f = open('updated-record-set.json', 'w')
+f = open('changed-record-set.json', 'w')
 f.write(my_json)
 f.close()
 
