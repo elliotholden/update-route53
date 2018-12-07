@@ -1,0 +1,16 @@
+{
+	"Comment": "Updated IP Address",
+	"Changes": [
+		{
+			"Action": "UPSERT",
+			"ResourceRecordSet": {
+				"Name": "lfcs.scriptbabies.com",
+				"Type": "A",
+				"TTL": 300, 
+				"ResourceRecords": [
+					{ "Value": "100.26.187.63" }
+				]
+			}
+		}
+	]
+}
