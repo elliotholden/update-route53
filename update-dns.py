@@ -6,7 +6,7 @@ import os	# This is so you can make system calls
 import re	# This is so you can use regular expressions
 import sys	# This is so you can use command line arguments
 
-# Assign your hosted-zone-id to variable
+# Assign the hosted-zone-id (you provide as a command line argumnet) to a variable
 my_hosted_zone_id = sys.argv[1] 
 
 # Pull down the current Route53 'A' record for your hosted zone, so you know what it was before you do the update
