@@ -1,0 +1,5 @@
+# Files that I want git to ignore
+dns-record-change.output
+errors.txt
+new-record-set.json
+output.txt
