@@ -7,7 +7,7 @@ This script relies on the fact that AWS allows you to access meta-data from a ru
 
 You need to supply a "hosted-zone-id" and an "absolute file path"
   - The "hosted-zone-id" is provided by AWS on your Hosted Zones page
-  - The "absolute file path" is the path to where you are running this script on your system (output files will be written there)
+  - The "absolute file path" is the path from where you are running this script on your system (output files will be written there)
 If you are running the cli version of this program you will be prompted for both as you run the program from the command line.
 If you are running the non-cli version then you must supply the "hosted-zone-id" and an "absolute file path" inside the script.
 
