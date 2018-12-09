@@ -1,0 +1,12 @@
+[
+    {
+        "ResourceRecords": [
+            {
+                "Value": "54.88.231.71"
+            }
+        ], 
+        "Type": "A", 
+        "Name": "lfcs.scriptbabies.com.", 
+        "TTL": 300
+    }
+]
