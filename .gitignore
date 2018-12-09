@@ -3,3 +3,8 @@ dns-record-change.output
 errors.txt
 new-record-set.json
 output.txt
+# Update files
+# Updated files
+change-record-set-output.txt
+get-previous-record-set-errors.txt
+previous-record-set.json
