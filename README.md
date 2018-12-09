@@ -3,6 +3,8 @@
 
 A script to update an EC2 instances ipv4 address in Route53 (update the 'A' record) with the current public ipv4 address assigned by AWS
 
+This script relies on the fact that AWS allows you to access meta-data from a running EC2 instance. Including in the metat-data is the currently assinged public ipv4 address. Also since AWS allows "User Data" to be pass in and executed as root upon an EC2 instances boot, you can add this script as part of your "User Data".
+
 You need to supply a "hosted-zone-id" and an "absolute file path"
   - The "hosted-zone-id" is provided by AWS on your Hosted Zones page
   - The "absolute file path" is the path to where you are running this script on your system (output files will be written there)
@@ -19,3 +21,6 @@ inside your "User Data" area:
   #!/usr/bin/bash
 
   /path/to/script/update-dns.py
+  
+Also keep in mind that rebooting the intance will not get you a new public ipv4 addres from AWS. You must be started the instance from
+a "shutdown" state in order for the "User Data" to take effect.
