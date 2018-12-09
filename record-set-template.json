@@ -4,11 +4,11 @@
 		{
 			"Action": "UPSERT",
 			"ResourceRecordSet": {
-				"Name": "lfcs.scriptbabies.com",
+				"Name": "your.domain.name",
 				"Type": "A",
 				"TTL": 300, 
 				"ResourceRecords": [
-					{ "Value": "100.26.187.63" }
+					{ "Value": "0.0.0.0" }
 				]
 			}
 		}

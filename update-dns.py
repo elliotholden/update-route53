@@ -2,10 +2,9 @@
 
 import os
 import re
-import sys
 
-my_hosted_zone_id = 'Z2L2TMCJU3N9X3'
-my_file_path = '/home/elliot/update-dns/'
+my_hosted_zone_id = '123456789abcde' # Use "aws route53 list-hosted-zones" to get your hosted-zone-id
+my_file_path = '/path/to/script/' # Change this to the path where "this" script is located (output files get written here as well)
 
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \
 				+ my_hosted_zone_id + \
