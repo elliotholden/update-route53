@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-##### This script gets the current public ipv4 address for this instance as it boots up, creates a new-record-set.json file the updates Route 53 DNS #####
+##### This script gets the current public ipv4 address for this instance as it boots up, creates a new-record-set.json file then updates Route 53 DNS #####
 
 import os	# This is so you can make system calls
 import re	# This is so you can use regular expressions
