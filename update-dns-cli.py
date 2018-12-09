@@ -17,7 +17,7 @@ public_ipv4_address = os.popen('curl http://169.254.169.254/latest/meta-data/pub
 
 with open(my_file_path + 'record-set-template.json') as myfile:
 	my_json = re.sub('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', public_ipv4_address, myfile.read())
-	my_json = re.sub('my\.domain\.name', my_domain_name, myfile.read())
+	my_json = re.sub('my\.domain\.name', my_domain_name, my_json)
 
 f = open(my_file_path + 'new-record-set.json', 'w')
 f.write(my_json)
