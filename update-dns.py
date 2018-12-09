@@ -3,7 +3,8 @@
 import os
 import re
 
-my_hosted_zone_id = '123456789abcde' # Use "aws route53 list-hosted-zones" to get your hosted-zone-id
+my_hosted_zone_id = '123456789abcde' # Change this to "your" hosted-zone-id. Use "aws route53 list-hosted-zones" to get your hosted-zone-id
+my_domain_name = 'my.domain.name' # Change this to the domain name that you want want to up the the public ipv4 address for.
 my_file_path = '/path/to/script/' # Change this to the path where "this" script is located (output files get written here as well)
 
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \
@@ -15,6 +16,7 @@ current_ip_address = os.popen('curl http://169.254.169.254/latest/meta-data/publ
 
 with open(my_file_path + 'record-set-template.json') as myfile:
 	my_json = re.sub('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', current_ip_address, myfile.read())
+	my_json = re.sub('my\.domain\.name', my_domain_name, myfile.read())
 
 f = open(my_file_path + 'new-record-set.json', 'w')
 f.write(my_json)
