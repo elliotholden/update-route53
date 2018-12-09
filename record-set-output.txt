@@ -1,8 +1,0 @@
-{
-    "ChangeInfo": {
-        "Status": "PENDING", 
-        "Comment": "Updated IP Address", 
-        "SubmittedAt": "2018-12-09T00:44:37.596Z", 
-        "Id": "/change/CFOODLXQWDPY2"
-    }
-}
