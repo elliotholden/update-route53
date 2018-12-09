@@ -2,7 +2,6 @@
 
 import os
 import re
-import sys
 
 my_hosted_zone_id = input('Please enter a hosted-zone-id: ')
 my_file_path = input('Please enter an absolute file path: ')
