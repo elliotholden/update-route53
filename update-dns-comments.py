@@ -6,7 +6,7 @@ import os	# This is so you can make system calls
 import re	# This is so you can use regular expressions
 
 my_hosted_zone_id = '123456789abcde' # Change this to "your" hosted-zone-id. Use "aws route53 list-hosted-zones" to get your hosted-zone-id
-my_domain_name = 'my.domain.name' # The domain name that you are changing the 'A' record on
+my_domain_name = 'my.domain.name' # Change this to the domain name that you want want to up the the public ipv4 address for.
 my_file_path = '/path/to/script/' # Path to the where this script is located (output files will be written there as well)
 
 # Pull down the current Route53 'A' record for your hosted zone, so you know what it was before you do the update
