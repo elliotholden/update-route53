@@ -5,9 +5,9 @@
 import os	# This is so you can make system calls
 import re	# This is so you can use regular expressions
 
-my_hosted_zone_id = 'Z2L2TMCJU3N9X3'
-my_domain_name = 'lfcs.scriptbabies.com'
-my_file_path = '/home/elliot/update-dns/'
+my_hosted_zone_id = '123456789abcde' # You hosted-zone-id
+my_domain_name = 'my.domain.name' # The domain name that you are changing the 'A' record on
+my_file_path = '/path/to/script/' # Path to the where this script is located (output files will be written there as well)
 
 # Pull down the current Route53 'A' record for your hosted zone, so you know what it was before you do the update
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \

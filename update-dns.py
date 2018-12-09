@@ -3,9 +3,9 @@
 import os
 import re
 
-my_hosted_zone_id = 'Z2L2TMCJU3N9X3' # Change this to "your" hosted-zone-id. Use "aws route53 list-hosted-zones" to get your hosted-zone-id
-my_domain_name = 'lfcs.scriptbabies.com' # Change this to the domain name that you want want to up the the public ipv4 address for.
-my_file_path = '/home/elliot/update-dns/' # Change this to the path where "this" script is located (output files get written here as well)
+my_hosted_zone_id = '123456789abcde' # Change this to "your" hosted-zone-id. Use "aws route53 list-hosted-zones" to get your hosted-zone-id
+my_domain_name = 'my.domain.name' # Change this to the domain name that you want want to up the the public ipv4 address for.
+my_file_path = '/path/to/script/' # Change this to the path where "this" script is located (output files get written here as well)
 
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \
 				+ my_hosted_zone_id + \
