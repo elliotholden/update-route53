@@ -6,6 +6,7 @@ import sys
 
 my_hosted_zone_id = input('Please enter a hosted-zone-id: ')
 my_file_path = input('Please enter an absolute file path: ')
+my_domain_name = input('Please enter a domain name: ')
 
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \
 				+ my_hosted_zone_id + \
@@ -16,6 +17,7 @@ public_ipv4_address = os.popen('curl http://169.254.169.254/latest/meta-data/pub
 
 with open(my_file_path + 'record-set-template.json') as myfile:
 	my_json = re.sub('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', public_ipv4_address, myfile.read())
+	my_json = re.sub('my\.domain\.name', my_domain_name, myfile.read())
 
 f = open(my_file_path + 'new-record-set.json', 'w')
 f.write(my_json)

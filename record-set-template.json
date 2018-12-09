@@ -4,7 +4,7 @@
 		{
 			"Action": "UPSERT",
 			"ResourceRecordSet": {
-				"Name": "your.domain.name",
+				"Name": "my.domain.name",
 				"Type": "A",
 				"TTL": 300, 
 				"ResourceRecords": [
