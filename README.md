@@ -22,5 +22,4 @@ inside your "User Data" area:
 
   /path/to/script/update-dns.py
   
-Also keep in mind that rebooting the intance will not get you a new public ipv4 addres from AWS. You must be started the instance from
-a "shutdown" state in order for the "User Data" to take effect.
+Also keep in mind that rebooting the intance will not get you a new public ipv4 addres from AWS. You must start the instance from a "shutdown" state in order for the "User Data" to take effect.
