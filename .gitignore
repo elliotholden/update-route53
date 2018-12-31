@@ -2,6 +2,7 @@
 dns-record-change.output
 errors.txt
 new-record-set.json
+diff.txt
 output.txt
 # Update files
 # Updated files
