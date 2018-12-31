@@ -4,7 +4,7 @@ import os
 import re
 
 my_hosted_zone_id = input('Please enter a hosted-zone-id: ')
-my_file_path = input('Please enter an absolute file path: ')
+my_file_path = input('Please enter an absolute file path (include the trailing "/"): ')
 my_domain_name = input('Please enter a domain name: ')
 
 os.system('aws route53 list-resource-record-sets --hosted-zone-id ' \
