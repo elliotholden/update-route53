@@ -12,7 +12,7 @@ If you are running the cli version of this program you will be prompted for both
 If you are running the non-cli version then you must supply the "hosted-zone-id" and an "absolute file path" inside the script.
 
 Since the instance you are running this script on needs to make changes to Route53, you need to create Role based Policy allowing such
-access and asign the role to this instance.
+access and asign the role to the instance you are running this script on.
 
 The non-cli version is desinged to be run as "User Data" as your instance boots up. So you would have something similar to the following
 inside your "User Data" area:
