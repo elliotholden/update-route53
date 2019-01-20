@@ -1,6 +1,8 @@
 # update-route53.py
 # update-route53-cli.py
 
+REQUIREMENTS: *python3*
+
 A script to update an EC2 instances ipv4 address in Route53 (update the 'A' record) with the current public ipv4 address assigned by AWS
 
 This script relies on the fact that AWS allows you to access meta-data from a running EC2 instance. Included in the metat-data is the currently assinged public ipv4 address. Also since AWS allows "User Data" to be pass in and executed as root upon an EC2 instances boot, you can add this script as part of your "User Data".
