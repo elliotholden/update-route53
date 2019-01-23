@@ -1,12 +1,3 @@
-# Files that I want git to ignore
-dns-record-change.output
-errors.txt
-diff.txt
-new-record-set.json
-diff.txt
-output.txt
-# Update files
-# Updated files
-change-record-set-output.txt
-get-previous-record-set-errors.txt
+change-recored-set.out
 previous-record-set.json
+record-set.json
