@@ -36,7 +36,8 @@ cd /root/route53
 Also keep in mind that rebooting the intance will not get you a new public ipv4 addres from AWS. You must start the instance from a "shutdown" state in order for the "User Data" to take effect.
 
 
-1.  First create a “resource record” in the “hosted zone” of your choice in Route53. This script only works with “A” records for now so create an “A” record with a domain name. Set the value (IP address) of the A record to something that will go nowhere like 0.0.0.0 (this will get updated when the script runs)
+1. You need to give the instace you are running this script on permisison to update your Route53 hosted zones. You can do this after you have created the instance. Or duing the instance creation procces.
+2. First create a “resource record” in the “hosted zone” of your choice in Route53. This script only works with “A” records for now so create an “A” record with a domain name. Set the value (IP address) of the A record to something that will go nowhere like 0.0.0.0 (this will get updated when the script runs)
 2. You will need Python 3, AWS CLI installed so you need to run the following to install those:
 * yum install –y update
 * yum install –y epel-release
@@ -44,6 +45,6 @@ Also keep in mind that rebooting the intance will not get you a new public ipv4 
 * yum install –y awscli
 3. Put the "update.py" and "template.json" files in a directory together (maybe /root/route53) 
 4. Make sure "update.py" is executable then run the command.
- **the first argument to the command is the “hosted zone ID” and the second should be the domain name you are updating.
-iv.	Make sure you have added the script to a location that can contain any output that the script might generate. Place update.py and template.json in some directory together. For example: /root/route53
+    - the first argument to the command is the “hosted zone ID” and the second should be the domain name you are updating.
+
 
