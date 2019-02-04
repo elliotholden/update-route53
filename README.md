@@ -22,8 +22,8 @@ access and assign the role to the instance you are running this script on. You c
 
 Your script that you will place in your [User data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) section will look like this:
   
-#cloud-boothook
-#!/usr/bin/bash
+- #cloud-boothook
+- #!/usr/bin/bash
 
 yum install –y update
 yum install –y epel-release
