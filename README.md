@@ -46,8 +46,8 @@ Also keep in mind that rebooting the intance will not get you a new public ipv4 
 		- sudo yum install –y awscli
 
 	- If you are using Amaon Linux 2 do the following:
-   	-  sudo yum update
-		-  sudo yum install python3
+   	- sudo yum update
+		- sudo yum install python3
 
 3. Put the "update.py" and "template.json" files in a directory together (maybe /root/route53) 
 
