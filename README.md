@@ -39,15 +39,15 @@ Also keep in mind that rebooting the intance will not get you a new public ipv4 
 1. You need to give the instace you are running this script on permisison to update your Route53 hosted zones. You can do this after you have created the instance. Or duing the instance creation procces.
 2. First create a “resource record” in the “hosted zone” of your choice in Route53. This script only works with “A” records for now so create an “A” record with a domain name. Set the value (IP address) of the A record to something that will go nowhere like 0.0.0.0 (this will get updated when the script runs)
 2. You will need Python 3, AWS CLI installed.
-	If you are using CentOS do the following:
-	* sudo yum install –y update
-	* sudo yum install –y epel-release
-	* sudo yum install –y python36
-	- sudo yum install –y awscli
+	- If you are using CentOS do the following:
+		- sudo yum install –y update
+		- sudo yum install –y epel-release
+		- sudo yum install –y python36
+		- sudo yum install –y awscli
 
-	If you are using Amaon Linux 2 do the following:
-   -  sudo yum update
-	*  sudo yum install python3
+	- If you are using Amaon Linux 2 do the following:
+   	-  sudo yum update
+		-  sudo yum install python3
 
 3. Put the "update.py" and "template.json" files in a directory together (maybe /root/route53) 
 
