@@ -10,7 +10,7 @@ A script to update an EC2 instances ipv4 address in Route53 (update the 'A' reco
 
 This script relies on the fact that AWS allows you to access meta-data from a running EC2 instance. Included in the metat-data is the currently assinged public ipv4 address. 
 Also since AWS allows "User Data" to be passed in and executed as root upon an EC2 instances boot, you can add this script as part of your "User Data".
-If you want this to work for any "new" EC2 vms that you create then you need to create a base AMI that has this script alread installed in a location of your choosing.
+If you want this to work for any "new" EC2 vms that you create then you need to create a base AMI that has this script already installed in a location of your choosing.
 
 
 You need to supply a "hosted-zone-id" and a FQDN (fully qualified domain name)
